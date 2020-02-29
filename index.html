@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="application-root"></div>
+  
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script type="text/babel">
+
+    function App(props) {
+  return (
+    <main id='app-id' className='container'>
+        {props.children}
+    </main>
+  );
+}
+
+    ReactDOM.render(
+    <App>
+    <header>
+      <h1>Sally's Student Resume</h1>
+    </header>
+    <address>
+            <h2>Sally Smith</h2>
+            <p><a href="mailto:sally@nowhere.com">sally@nowhere.com</a></p>
+            <p>(555)555-5555</p>
+            <div>
+              <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" id="profile-pic" alt="Sally Smith Photo"/>
+            </div>
+        </address>
+      <section className="education">
+      <h2>Education</h2>
+      <h3>VCU 2008-2012</h3>
+      <p>Bachelors of Science</p>
+      </section>
+      <section className="employment">
+      <h2>Employment</h2>
+      <h3>Registered Nurse</h3>
+      <h4>Some Hospital</h4>
+      <p>Lorem Ipsum</p>
+      <h3>Registered Nurse</h3>
+      <h4>Some Other Hospital</h4>
+      <p>Lorem Ipsum</p>
+      </section>
+
+
+    </App>,
+    document.querySelector('#application-root')
+    );
+  </script>
+  </body>
+</html>
